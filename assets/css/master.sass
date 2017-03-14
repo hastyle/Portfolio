@@ -1,0 +1,185 @@
+/*////////////// FONTS /////////////////////////////////////////*/
+@import url('https://fonts.googleapis.com/css?family=Arapey|Montserrat')
+@import url('https://fonts.googleapis.com/css?family=Bitter|Cabin|Coiny|Crete+Round|Dancing+Script|Domine|Droid+Serif|Eczar|Exo+2|Francois+One|Josefin+Sans|Lobster|Noto+Serif|Open+Sans|Open+Sans+Condensed:300|Oswald|PT+Sans|Pacifico|Pathway+Gothic+One|Play|Playfair+Display|Poiret+One|Prociono|Questrial|Quicksand|Raleway|Righteous|Roboto|Roboto+Condensed|Yanone+Kaffeesatz')
+
+/////////////////////
+.no-padding
+  padding: 0
+
+.padding-left
+  padding-left: 200px
+.padding-right
+  padding-right: 100px
+////////// Variables /////////
+$title-font: 'Arapey', serif
+$light-black: #3c3c3c
+$dark-black: #2f2f2f
+$purple: #7c63e9
+$turquoise: #54e1eb
+$yellow: #f3de4d
+////////////////////////////
+
+////////////// Animation /////////////
+@keyframes rotate
+  100%
+    transform: rotate(360deg)
+//////////////////////////////////////
+
+section#content
+  position: relative
+  .left-content
+    background: $light-black
+    height: 100vh
+    position: relative
+    .logo
+      background: #fdfdfd
+      border-radius: 10px
+      width: 200px
+      height: 70px
+      position: absolute
+      margin-top: 50px
+      left: -20px
+      box-shadow: 0px 0px 38px 0px rgba(0, 0, 0, 0.27)
+      cursor: pointer
+      .MHD
+        width: 200px
+        padding: 5px 10px 10px 30px
+
+
+    .content
+      .title
+        font-family: $title-font
+        color: black
+        //text-transform: uppercase
+        text-align: left
+        color: white
+        padding-left: 20px
+        font-size: 30px
+        letter-spacing: 2px
+        margin: 0
+        padding-bottom: 10px
+        &:nth-child(1)
+          padding-top: 40vh
+        .purple
+          color: $purple
+        .turquoise
+          color: $turquoise
+        .yellow
+          color: $yellow
+
+
+
+
+  .middle-content
+    //background-image: linear-gradient(to right,$light-black 50%,$dark-black 50%)
+    height: 100vh
+    position: absolute
+    transform: translateX(-50%)
+    left: 50%
+    z-index: 2
+    .list
+      list-style: none
+      display: flex
+      height: 100vh
+      flex-direction: column
+      justify-content: center
+      text-align: center
+      .list-item
+        margin: 20px 0
+        cursor: pointer
+        .social
+          color: white
+          padding: 0 5px
+          transition: all 0.3s ease-in-out
+          &:hover
+            color: $purple
+            transform: scale(1.5)
+        a.list-item-link
+          text-decoration: none
+          color: white
+          transition: all 0.5s ease-in-out
+          font-family: $title-font
+          letter-spacing: 3px
+          &:hover
+            color: rgba(255,255,255,0.5)
+          .moving-logo
+            width: 100%
+            animation: rotate 20s infinite
+
+
+
+  .right-content
+    background: $dark-black
+    height: 100vh
+    position: relative
+    overflow: hidden
+    .col-1
+      .list
+        list-style: none
+        .list-item
+          cursor: pointer
+          padding: 10px 0
+          width: 100px
+          position: relative
+          margin: 0 auto
+          a.list-item-link
+            text-decoration: none
+            .title
+              margin: 0 10px
+              font-size: 15px
+              text-transform: uppercase
+              border: 1px solid white
+              letter-spacing: 3px
+              padding: 5px
+              color: white
+              text-align: center
+            .circle-project
+              width: 100%
+              height: 100px
+              border-radius: 100%
+              background: $light-black
+
+            @for $i from 1 to 4
+              .code-project-#{$i}
+                background-image: url(../imgs/code-project-#{$i}.png)
+                width: 100%
+                //background-size: cover
+                transition: all 0.7s ease-in-out
+                &:hover
+                  background-position: center
+
+
+    .col-2
+      @extend .col-1
+      height: 100vh
+      .list
+        display: flex
+        flex-direction: column-reverse
+        justify-content: flex-start
+        height: 100%
+        position: relative
+        text-align: center
+      @for $i from 1 to 4
+        .design-project-#{$i}
+          background-image: url(../imgs/design-project-#{$i}.png) !important
+          width: 100% !important
+          transition: all 0.7s ease-in-out !important
+          &:hover
+            background-position: center !important
+
+      .more
+        width: 50px
+        height: 50px
+        border: solid 1px white
+        position: absolute
+        top: 00%
+        left: 13%
+        transform: rotate(45deg)
+        display: table
+        .arrow
+          transform: rotate(-45deg)
+          display: table-cell
+          text-align: center
+          vertical-align: middle
+          color: white
+          font-size: 20px

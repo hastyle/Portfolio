@@ -1,0 +1,259 @@
+/* */
+@import url("https://fonts.googleapis.com/css?family=Arapey|Montserrat");
+@import url("https://fonts.googleapis.com/css?family=Bitter|Cabin|Coiny|Crete+Round|Dancing+Script|Domine|Droid+Serif|Eczar|Exo+2|Francois+One|Josefin+Sans|Lobster|Noto+Serif|Open+Sans|Open+Sans+Condensed:300|Oswald|PT+Sans|Pacifico|Pathway+Gothic+One|Play|Playfair+Display|Poiret+One|Prociono|Questrial|Quicksand|Raleway|Righteous|Roboto|Roboto+Condensed|Yanone+Kaffeesatz");
+.no-padding {
+  padding: 0;
+}
+
+.padding-left {
+  padding-left: 200px;
+}
+
+.padding-right {
+  padding-right: 100px;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+section#content {
+  position: relative;
+}
+
+section#content .left-content {
+  background: #3c3c3c;
+  height: 100vh;
+  position: relative;
+}
+
+section#content .left-content .logo {
+  background: #fdfdfd;
+  border-radius: 10px;
+  width: 200px;
+  height: 70px;
+  position: absolute;
+  margin-top: 50px;
+  left: -20px;
+  box-shadow: 0px 0px 38px 0px rgba(0, 0, 0, 0.27);
+  cursor: pointer;
+}
+
+section#content .left-content .logo .MHD {
+  width: 200px;
+  padding: 5px 10px 10px 30px;
+}
+
+section#content .left-content .content .title {
+  font-family: "Arapey", serif;
+  color: black;
+  text-align: left;
+  color: white;
+  padding-left: 20px;
+  font-size: 30px;
+  letter-spacing: 2px;
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+section#content .left-content .content .title:nth-child(1) {
+  padding-top: 40vh;
+}
+
+section#content .left-content .content .title .purple {
+  color: #7c63e9;
+}
+
+section#content .left-content .content .title .turquoise {
+  color: #54e1eb;
+}
+
+section#content .left-content .content .title .yellow {
+  color: #f3de4d;
+}
+
+section#content .middle-content {
+  height: 100vh;
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  z-index: 2;
+}
+
+section#content .middle-content .list {
+  list-style: none;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+section#content .middle-content .list .list-item {
+  margin: 20px 0;
+  cursor: pointer;
+}
+
+section#content .middle-content .list .list-item .social {
+  color: white;
+  padding: 0 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+section#content .middle-content .list .list-item .social:hover {
+  color: #7c63e9;
+  transform: scale(1.5);
+}
+
+section#content .middle-content .list .list-item a.list-item-link {
+  text-decoration: none;
+  color: white;
+  transition: all 0.5s ease-in-out;
+  font-family: "Arapey", serif;
+  letter-spacing: 3px;
+}
+
+section#content .middle-content .list .list-item a.list-item-link:hover {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+section#content .middle-content .list .list-item a.list-item-link .moving-logo {
+  width: 100%;
+  animation: rotate 20s infinite;
+}
+
+section#content .right-content {
+  background: #2f2f2f;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+section#content .right-content .col-1 .list, section#content .right-content .col-2 .list {
+  list-style: none;
+}
+
+section#content .right-content .col-1 .list .list-item, section#content .right-content .col-2 .list .list-item {
+  cursor: pointer;
+  padding: 10px 0;
+  width: 100px;
+  position: relative;
+  margin: 0 auto;
+}
+
+section#content .right-content .col-1 .list .list-item a.list-item-link, section#content .right-content .col-2 .list .list-item a.list-item-link {
+  text-decoration: none;
+}
+
+section#content .right-content .col-1 .list .list-item a.list-item-link .title, section#content .right-content .col-2 .list .list-item a.list-item-link .title {
+  margin: 0 10px;
+  font-size: 15px;
+  text-transform: uppercase;
+  border: 1px solid white;
+  letter-spacing: 3px;
+  padding: 5px;
+  color: white;
+  text-align: center;
+}
+
+section#content .right-content .col-1 .list .list-item a.list-item-link .circle-project, section#content .right-content .col-2 .list .list-item a.list-item-link .circle-project {
+  width: 100%;
+  height: 100px;
+  border-radius: 100%;
+  background: #3c3c3c;
+}
+
+section#content .right-content .col-1 .list .list-item a.list-item-link .code-project-1, section#content .right-content .col-2 .list .list-item a.list-item-link .code-project-1 {
+  background-image: url(../imgs/code-project-1.png);
+  width: 100%;
+  transition: all 0.7s ease-in-out;
+}
+
+section#content .right-content .col-1 .list .list-item a.list-item-link .code-project-1:hover, section#content .right-content .col-2 .list .list-item a.list-item-link .code-project-1:hover {
+  background-position: center;
+}
+
+section#content .right-content .col-1 .list .list-item a.list-item-link .code-project-2, section#content .right-content .col-2 .list .list-item a.list-item-link .code-project-2 {
+  background-image: url(../imgs/code-project-2.png);
+  width: 100%;
+  transition: all 0.7s ease-in-out;
+}
+
+section#content .right-content .col-1 .list .list-item a.list-item-link .code-project-2:hover, section#content .right-content .col-2 .list .list-item a.list-item-link .code-project-2:hover {
+  background-position: center;
+}
+
+section#content .right-content .col-1 .list .list-item a.list-item-link .code-project-3, section#content .right-content .col-2 .list .list-item a.list-item-link .code-project-3 {
+  background-image: url(../imgs/code-project-3.png);
+  width: 100%;
+  transition: all 0.7s ease-in-out;
+}
+
+section#content .right-content .col-1 .list .list-item a.list-item-link .code-project-3:hover, section#content .right-content .col-2 .list .list-item a.list-item-link .code-project-3:hover {
+  background-position: center;
+}
+
+section#content .right-content .col-2 {
+  height: 100vh;
+}
+
+section#content .right-content .col-2 .list {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-start;
+  height: 100%;
+  position: relative;
+  text-align: center;
+}
+
+section#content .right-content .col-2 .design-project-1 {
+  background-image: url(../imgs/design-project-1.png) !important;
+  width: 100% !important;
+  transition: all 0.7s ease-in-out !important;
+}
+
+section#content .right-content .col-2 .design-project-1:hover {
+  background-position: center !important;
+}
+
+section#content .right-content .col-2 .design-project-2 {
+  background-image: url(../imgs/design-project-2.png) !important;
+  width: 100% !important;
+  transition: all 0.7s ease-in-out !important;
+}
+
+section#content .right-content .col-2 .design-project-2:hover {
+  background-position: center !important;
+}
+
+section#content .right-content .col-2 .design-project-3 {
+  background-image: url(../imgs/design-project-3.png) !important;
+  width: 100% !important;
+  transition: all 0.7s ease-in-out !important;
+}
+
+section#content .right-content .col-2 .design-project-3:hover {
+  background-position: center !important;
+}
+
+section#content .right-content .col-2 .more {
+  width: 50px;
+  height: 50px;
+  border: solid 1px white;
+  position: absolute;
+  top: 00%;
+  left: 13%;
+  transform: rotate(45deg);
+  display: table;
+}
+
+section#content .right-content .col-2 .more .arrow {
+  transform: rotate(-45deg);
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  color: white;
+  font-size: 20px;
+}

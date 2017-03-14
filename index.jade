@@ -1,0 +1,97 @@
+include ./html-start
+
+
+section#content
+
+  .col-sm-6.no-padding
+    .left-content.padding-right
+      a.logo(href="#")
+        //include ./assets/imgs/logo.svg
+        img.MHD(src="/assets/imgs/logo.png")
+      .content
+        h1.title Hi,
+        h1.title My Name is Mohammed Alhazmi
+        h1.title I am a
+          span.purple  D
+          |esigner,
+          span.turquoise   D
+          |eveloper and
+        h1.title an
+          span.yellow  E
+          |lectrical
+          span.yellow  E
+          |ngineer
+  .middle-content
+      u.list
+        li.list-item
+          a.list-item-link ABOUT
+        li.list-item
+          a.list-item-link WORK
+        li.list-item
+          a.list-item-link GALLERY
+        li.list-item
+          a.list-item-link
+            .moving-logo
+              include ./assets/imgs/logo-square.svg
+        li.list-item
+          a.list-item-link ABOUT
+        li.list-item
+          a.list-item-link ABOUT
+        li.list-item
+          i.fa.fa-instagram.social
+          i.fa.fa-facebook.social
+          i.fa.fa-dribbble.social
+  .col-sm-6.no-padding
+    .right-content.padding-left
+      .container-fluid
+        .row
+          .col-sm-6
+            .col-1
+              u.list
+                li.list-item
+                  a.list-item-link
+                    h1.title code
+                li.list-item
+                  a.list-item-link
+                    .circle-project.code-project-1
+                li.list-item
+                  a.list-item-link
+                    .circle-project.code-project-2
+                li.list-item
+                  a.list-item-link
+                    .circle-project.code-project-3
+                li.list-item
+                  a.list-item-link
+                    .circle-project.code-project-1
+              .more
+                .arrow
+                  i.fa.fa-arrow-down
+
+          .col-sm-6
+            .col-2
+              u.list
+                li.list-item
+                  a.list-item-link
+                    h1.title design
+                li.list-item
+                  a.list-item-link
+                    .circle-project.design-project-1
+                li.list-item
+                  a.list-item-link
+                    .circle-project.design-project-2
+                li.list-item
+                  a.list-item-link
+                    .circle-project.design-project-3
+                li.list-item
+                  a.list-item-link
+                    .circle-project.design-project-1
+                li.more
+                  .arrow
+                    i.fa.fa-arrow-up
+
+
+
+
+
+
+include ./html-end
