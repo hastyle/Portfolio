@@ -94,4 +94,18 @@ var arrowUp = $('#thankyou .icon');
     }, 3500);
     });
 
+
+/////////////////// Typed JS ////////////////////
+
 });
+
+
+document.addEventListener('DOMContentLoaded', function(){
+    Typed.new("#typed", {
+        stringsElement: document.getElementById('typed-strings'),
+        typeSpeed: 10,
+        backDelay: 100,
+        loop: false,
+        contentType: 'html',
+     });
+ });

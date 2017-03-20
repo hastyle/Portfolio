@@ -2,14 +2,8 @@
 @import url('https://fonts.googleapis.com/css?family=Arapey|Montserrat')
 @import url('https://fonts.googleapis.com/css?family=Bitter|Cabin|Coiny|Crete+Round|Dancing+Script|Domine|Droid+Serif|Eczar|Exo+2|Francois+One|Josefin+Sans|Lobster|Noto+Serif|Open+Sans|Open+Sans+Condensed:300|Oswald|PT+Sans|Pacifico|Pathway+Gothic+One|Play|Playfair+Display|Poiret+One|Prociono|Questrial|Quicksand|Raleway|Righteous|Roboto|Roboto+Condensed|Yanone+Kaffeesatz')
 
-/////////////////////
-.no-padding
-  padding: 0
 
-.padding-left
-  padding-left: 200px
-.padding-right
-  padding-right: 100px
+
 ////////// Variables /////////
 $title-font: 'Arapey', serif
 $light-black: #3c3c3c
@@ -17,12 +11,23 @@ $dark-black: #2f2f2f
 $purple: #7c63e9
 $turquoise: #54e1eb
 $yellow: #f3de4d
+$sq-width: 50px
+$sq-height: 50px
 ////////////////////////////
+@import "global-style"
 
 ////////////// Animation /////////////
 @keyframes rotate
   100%
     transform: rotate(360deg)
+@keyframes rotation
+  100%
+    top: -10%
+    transform: rotate(360deg*1)
+@keyframes rotation-bottom
+  100%
+    bottom: -10%
+    transform: rotate(360deg*1)
 //////////////////////////////////////
 
 section#content
@@ -31,6 +36,7 @@ section#content
     background: $light-black
     height: 100vh
     position: relative
+    overflow: hidden
     .logo
       background: #fdfdfd
       border-radius: 10px
@@ -47,6 +53,16 @@ section#content
 
 
     .content
+      height: 100vh
+      display: flex
+      //justify-content: center
+      //vertical-align: middle
+      align-items: center
+      //.typed-cursor
+        color: white
+        font-size: 25px
+        opacity: 1
+        animation: blink 0.7s infinite
       .title
         font-family: $title-font
         color: black
@@ -58,7 +74,7 @@ section#content
         letter-spacing: 2px
         margin: 0
         padding-bottom: 10px
-        &:nth-child(1)
+        //&:nth-child(1)
           padding-top: 40vh
         .purple
           color: $purple
@@ -134,21 +150,30 @@ section#content
               color: white
               text-align: center
             .circle-project
-              width: 100%
+              //width: 100%
               height: 100px
               border-radius: 100%
               background: $light-black
-
+              position: relative
             @for $i from 1 to 4
               .code-project-#{$i}
                 background-image: url(../imgs/code-project-#{$i}.png)
                 width: 100%
                 //background-size: cover
                 transition: all 0.7s ease-in-out
+                &::before
+                  content: ''
+                  position: absolute
+                  width: 100%
+                  height: 100%
+                  background: $dark-black
+                  border-radius: 100%
+                  opacity: 0
+                  transition: all 0.7s ease-in-out
                 &:hover
                   background-position: center
-
-
+                  &::before
+                    opacity: .7
     .col-2
       @extend .col-1
       height: 100vh
@@ -183,3 +208,19 @@ section#content
           vertical-align: middle
           color: white
           font-size: 20px
+
+
+
+
+
+
+
+
+
+//@keyframes blink
+  0%
+   opacity:1
+  50%
+   opacity:0
+  100%
+   opacity:1
