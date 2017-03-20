@@ -101,6 +101,22 @@ a:visited {
   animation-name: rotation-bottom;
 }
 
+@media only screen and (max-width: 768px) {
+  .middle-content {
+    display: none;
+  }
+  .padding-left {
+    padding-left: 0px;
+  }
+  .padding-right {
+    padding-right: 0px;
+  }
+  .title {
+    text-align: center !important;
+    width: 100% !important;
+  }
+}
+
 @keyframes rotate {
   100% {
     transform: rotate(360deg);
