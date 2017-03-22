@@ -93,12 +93,32 @@ a:visited {
   filter: blur(0px);
 }
 
-.bottom-1 {
+.bottom-1, .bottom-2, .bottom-3, .bottom-4, .bottom-5, .bottom-6 {
   top: auto;
   left: auto;
   right: 5%;
   bottom: 105%;
   animation-name: rotation-bottom;
+}
+
+.bottom-2 {
+  right: 180px;
+}
+
+.bottom-3 {
+  right: 80%;
+}
+
+.bottom-4 {
+  right: 70%;
+}
+
+.bottom-5 {
+  right: 10%;
+}
+
+.bottom-6 {
+  right: 15%;
 }
 
 @media only screen and (max-width: 768px) {
